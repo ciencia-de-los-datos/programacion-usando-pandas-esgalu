@@ -205,6 +205,7 @@ def pregunta_12():
     38   38                    eee:0,fff:9,iii:2
     39   39                    ggg:3,hhh:8,jjj:5
     """
+    tbl2 = pd.read_csv("tbl2.tsv", sep="\t")
     tbl2['_c5'] = tbl2._c5a + ':' + tbl2._c5b.map(str)
     tbl2 = tbl2.sort_values(['_c0', '_c5'], ascending=[True, True])
 
